@@ -1,0 +1,353 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CA435D4-43C4-4B6C-A8D2-5008A00879E7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44374</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\images\images_1.jpg" />
+    <Content Include="App_Data\YemekSiparis.mdf" />
+    <Content Include="App_Data\YemekSiparis_log.ldf">
+      <DependentUpon>YemekSiparis.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.Globalization.Calendars.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.ZipFile.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Net.Http.dll" />
+    <Content Include="bin\roslyn\System.Net.Sockets.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\WebApplication1.dll" />
+    <Content Include="bin\WebApplication1.pdb" />
+    <Content Include="bs4\bootstrap.min.css" />
+    <Content Include="bs4\bootstrap.min.js" />
+    <Content Include="bs4\jquery.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="obj\Debug\WebApplication1.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WebApplication1.dll" />
+    <Content Include="obj\Debug\WebApplication1.pdb" />
+    <Content Include="Resimler\08312a2e-e8ae-4f19-b97d-c962cec3a2f7lahmacun.jpeg" />
+    <Content Include="Resimler\1b7adb31-21fe-46cb-8528-30f1975fdf00atlas is back.jpg" />
+    <Content Include="Resimler\88a7ea90-0a5e-4c5f-a6fb-ef3e9dd8bdc0su.jpg" />
+    <Content Include="Resimler\8aff2610-c782-4f4c-810d-89a8b00f8e4fsu.jpg" />
+    <Content Include="Resimler\bb2a3e48-def7-4e0b-954b-2df9b567841dsu.jpg" />
+    <Content Include="Resimler\buyuk_ayran.jpg" />
+    <Content Include="Resimler\coca_cola.jpg" />
+    <Content Include="Resimler\domates_corbasi.jpg" />
+    <Content Include="Resimler\fanta.jpg" />
+    <Content Include="Resimler\favico.ico" />
+    <Content Include="Resimler\favico.png" />
+    <Content Include="Resimler\kasarli_pide.jpg" />
+    <Content Include="Resimler\kasarli_sand.jpg" />
+    <Content Include="Resimler\kavurmalı_pide.jpg" />
+    <Content Include="Resimler\kelle_paca.jpg" />
+    <Content Include="Resimler\kucuk_ayran.jpg" />
+    <Content Include="Resimler\kunefe.jpg" />
+    <Content Include="Resimler\lahmacun.jpeg" />
+    <Content Include="Resimler\mercimek_corbasi.jpg" />
+    <Content Include="Resimler\noimage.png" />
+    <Content Include="Resimler\slider\1.jpg" />
+    <Content Include="Resimler\slider\2.jpg" />
+    <Content Include="Resimler\slider\3.jpg" />
+    <Content Include="Resimler\su.jpg" />
+    <Content Include="Resimler\sucuklu_pide.jpg" />
+    <Content Include="Resimler\supangle.jpg" />
+    <Content Include="Resimler\tas_kebabı.jpg" />
+    <Content Include="Resimler\tavuk_corbasi.jpg" />
+    <Content Include="Resimler\yayla_corbasi.jpg" />
+    <Content Include="Uye\UyeDefault.aspx" />
+    <Content Include="Uye\UyeGiris.aspx" />
+    <Content Include="Uye\UyeKayit.aspx" />
+    <Content Include="Uye\UyeOturumuKapat.aspx" />
+    <Content Include="Uye\UyeSepet.aspx" />
+    <Content Include="Uye\UyeSepetOnay.aspx" />
+    <Content Include="Uye\UyeSifreDegistir.aspx" />
+    <Content Include="Uye\UyeUrunler.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Yonet\YonetBildirimDuzenle.aspx" />
+    <Content Include="Yonet\YonetBildirimler.aspx" />
+    <Content Include="Yonet\YonetDefault.aspx" />
+    <Content Include="Yonet\YonetGiris.aspx" />
+    <Content Include="Yonet\YonetOturumuKapat.aspx" />
+    <Content Include="Yonet\YonetYemekEkle.aspx" />
+    <Content Include="Yonet\YonetYemekler.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\BildirimSistemi.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Uye\UyeDefault.aspx.cs">
+      <DependentUpon>UyeDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeDefault.aspx.designer.cs">
+      <DependentUpon>UyeDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye\UyeGiris.aspx.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeGiris.aspx.designer.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye\UyeKayit.aspx.cs">
+      <DependentUpon>UyeKayit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeKayit.aspx.designer.cs">
+      <DependentUpon>UyeKayit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye\UyeOturumuKapat.aspx.cs">
+      <DependentUpon>UyeOturumuKapat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeOturumuKapat.aspx.designer.cs">
+      <DependentUpon>UyeOturumuKapat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye\UyeSepet.aspx.cs">
+      <DependentUpon>UyeSepet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeSepet.aspx.designer.cs">
+      <DependentUpon>UyeSepet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye\UyeSepetOnay.aspx.cs">
+      <DependentUpon>UyeSepetOnay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeSepetOnay.aspx.designer.cs">
+      <DependentUpon>UyeSepetOnay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye\UyeSifreDegistir.aspx.cs">
+      <DependentUpon>UyeSifreDegistir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeSifreDegistir.aspx.designer.cs">
+      <DependentUpon>UyeSifreDegistir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uye\UyeUrunler.aspx.cs">
+      <DependentUpon>UyeUrunler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uye\UyeUrunler.aspx.designer.cs">
+      <DependentUpon>UyeUrunler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet\YonetBildirimDuzenle.aspx.cs">
+      <DependentUpon>YonetBildirimDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet\YonetBildirimDuzenle.aspx.designer.cs">
+      <DependentUpon>YonetBildirimDuzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet\YonetBildirimler.aspx.cs">
+      <DependentUpon>YonetBildirimler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet\YonetBildirimler.aspx.designer.cs">
+      <DependentUpon>YonetBildirimler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet\YonetDefault.aspx.cs">
+      <DependentUpon>YonetDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet\YonetDefault.aspx.designer.cs">
+      <DependentUpon>YonetDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet\YonetGiris.aspx.cs">
+      <DependentUpon>YonetGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet\YonetGiris.aspx.designer.cs">
+      <DependentUpon>YonetGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet\YonetOturumuKapat.aspx.cs">
+      <DependentUpon>YonetOturumuKapat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet\YonetOturumuKapat.aspx.designer.cs">
+      <DependentUpon>YonetOturumuKapat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet\YonetYemekEkle.aspx.cs">
+      <DependentUpon>YonetYemekEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet\YonetYemekEkle.aspx.designer.cs">
+      <DependentUpon>YonetYemekEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonet\YonetYemekler.aspx.cs">
+      <DependentUpon>YonetYemekler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonet\YonetYemekler.aspx.designer.cs">
+      <DependentUpon>YonetYemekler.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\WebApplication1.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\WebApplication1.csproj.CopyComplete" />
+    <Content Include="obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\WebApplication1.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58843</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44374/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
